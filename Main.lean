@@ -509,5 +509,5 @@ unsafe def main (args : List String) : IO Unit := do
 
   let results : GradingResults := { tests, output }
 
-  if cfg.localRun then results.print else
+  -- if cfg.localRun then results.print else
   IO.FS.writeFile resultsJsonPath (toJson results).pretty
